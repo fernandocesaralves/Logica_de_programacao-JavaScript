@@ -3,6 +3,7 @@ let notas = [
 ];
 let output = document.querySelector('#output');
 let msg = '';
+let mediaAnual = 0;
 
 document.querySelector('#output').innerHTML = msg;
 
@@ -19,8 +20,12 @@ for(let i = 0; i < notas.length; i++) {
         totalBimestre += notas[i][j];
     }
     let mediaBimestre = totalBimestre / notas[i].length;
+    mediaAnual += mediaBimestre;
     msg += '<p>A média do' + (i+1) + ' bimestre é: ' + mediaBimestre + '</p><hr>'
     console.log('mediaBimestre', mediaBimestre);
 }
+
+mediaAnual = mediaAnual / notas.length;
+msg += '<p> a média anual é: ' + mediaAnual + '<p/>'
 
 output.innerHTML = msg;
