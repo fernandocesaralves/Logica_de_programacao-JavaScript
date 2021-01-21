@@ -16,3 +16,5 @@ for(propriedade in fernando) {
 
 
 document.querySelector('#output').innerHTML = msg;
+
+
